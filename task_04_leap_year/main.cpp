@@ -8,12 +8,14 @@ int main() {
     cout << "Zadaj rok";
     cin >> rok;
 
-    if (rok % 4 == 0)
+    if ((rok % 400 == 0) || (rok % 4 == 0 && rok % 100 != 0))
+    {
         cout << "Rok je priestupny ";
+    }
+    else
+    {
+        cout << "Rok nie je priestupny";
+    }
 
-    else 
-        cout
-             << "Rok nie je priestupny";    
-    
     return 0;
 }
